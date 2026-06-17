@@ -25,8 +25,8 @@ jobs:
 
     - name: Run tests with coverage
       run: |
-        pytest --cov=app tests/
+        PYTHONPATH=. pytest --cov=app tests/
 
     - name: Enforce 100 percent coverage
       run: |
-        coverage report --fail-under=100
+        PYTHONPATH=. coverage report --fail-under=100
